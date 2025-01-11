@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {StripComponent} from './components/strip/strip.component';
 import {HomeComponent} from './components/home/home.component';
 
