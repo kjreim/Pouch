@@ -1,0 +1,12 @@
+
+<h1 class="db-info">
+  Database Name: {{dbInfo()?.db_name}}<br>
+  Doc Count: {{dbInfo()?.doc_count}}
+</h1>
+
+
+@if (error) {
+  <div class="error">
+    {{error}}
+  </div>
+}

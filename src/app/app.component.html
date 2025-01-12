@@ -1,0 +1,12 @@
+<mat-toolbar></mat-toolbar>
+<mat-sidenav-container autosize="true">
+  <mat-sidenav #sidenav mode="push" opened disableClose>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/Home" routerLinkActive="active-nav-menu" #rl1="routerLinkActive" [activated]="rl1.isActive">Home</a>
+      <a mat-list-item routerLink="/Strips" routerLinkActive="active-nav-menu" #rl2="routerLinkActive" [activated]="rl2.isActive">Strip</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
