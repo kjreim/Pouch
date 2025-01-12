@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+html, body {
+  height: 100%;
+}
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$violet-palette,
+    typography: Roboto,
+    density: 0
+  ));
+}
+
+mat-toolbar {
+  @include mat.toolbar-overrides((
+   container-background-color: var(--mat-sys-tertiary-container),
+    container-text-color: var(--mat-sys-on-tertiary-container),
+  ))
+}
+mat-sidenav-container {
+  height: 100%;
+  @include mat.sidenav-overrides((
+    container-background-color: var(--mat-sys-secondary-container),
+    container-text-color: var(--mat-sys-on-secondary-container)
+  ));
+  .active-nav-menu {
+    @include mat.list-overrides((
+      active-indicator-color: var(--mat-sys-secondary-fixed-dim),
+      list-item-label-text-color: var(--mat-sys-on-secondary-fixed),
+      list-item-hover-label-text-color: var(--mat-sys-on-secondary-fixed)
+    ));
+  }
+}
