@@ -4,9 +4,14 @@
   Doc Count: {{dbInfo()?.doc_count}}
 </h1>
 
+<div>
+  <button mat-button (click)="addStrip()">Add Strip</button>
+</div>
+<button mat-button (click)="deleteStrip()">Delete Strip</button>
 
-@if (error) {
-  <div class="error">
-    {{error}}
-  </div>
-}
+
+<!--@if (error) {-->
+<!--  <div class="error">-->
+<!--    {{error}}-->
+<!--  </div>-->
+<!--}-->
